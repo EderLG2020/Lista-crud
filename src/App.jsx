@@ -1,13 +1,19 @@
 import './App.css'
-import HolaMundo from './components/Landing/holamundo'
-import Tail12 from './components/Tailwind/tailwind'
+import Formulario from './components/Formulario/Formulario'
+import ListadoForm from './components/ListadoFormulario/ListdoFormulario'
+import Header from './components/header/header'
+
 function App() {
   return (
-    <>
-      <p>Holas</p>
-      <HolaMundo />
-      <Tail12 />
-    </>
+    
+    <div className='container mx-auto pt-10'>
+      <Header/>
+      <div className='mt-12 flex'>
+        <Formulario/>
+        <ListadoForm/>
+      </div>
+    </div>
+    
   )
 }
 
