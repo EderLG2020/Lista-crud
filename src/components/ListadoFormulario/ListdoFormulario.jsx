@@ -1,6 +1,11 @@
 import Paciente from "../Paciente/paciente";
+// import { useEffect } from "react";
 
-const ListadoForm = ({ paciente }) => {
+const ListadoForm = ({ paciente, setPatiend, eliminarPaciente }) => {
+  // useEffect(() => {
+  //   console.log("Nuevo paciente");
+  // }, [paciente]);
+
   return (
     <div className="container lg:w-full md:h-screen overflow-y-scroll">
       {paciente && paciente.length ? (
@@ -14,7 +19,12 @@ const ListadoForm = ({ paciente }) => {
           </p>
 
           {paciente.map((patient, index) => (
-            <Paciente key={index} patient={patient} />
+            <Paciente
+              key={index}
+              patient={patient}
+              setPatiend={setPatiend}
+              eliminarPaciente={eliminarPaciente}
+            />
           ))}
         </>
       ) : (
