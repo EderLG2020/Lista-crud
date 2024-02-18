@@ -194,4 +194,4 @@ Pantalla movil Pixel 7 "412 x 915"
 
 ![Imagen principal](https://i.ibb.co/8269nzN/127shots-so.png)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fda156bf-c70e-4f68-bd9f-6a89ce7a3cd1/deploy-status)](https://app.netlify.com/sites/dulcet-dusk-1944b5/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4abfd77f-ab54-4141-9faa-118fda15f518/deploy-status)](https://app.netlify.com/sites/lista-veterinaria/deploys)
