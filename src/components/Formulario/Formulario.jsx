@@ -28,9 +28,41 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let errors = {};
+
+    const propietarioRegex = /^[A-Za-z ]+$/;
+    const nombreRegex = /^[A-Za-z ]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const sintomasRegex = /^[A-Za-z\s.,!?]+$/;
+
+    if (!nombreRegex.test(nombre)) {
+      errors.nombre = "- El nombre solo debe contener letras y espacios";
+    }
+
+    if (!propietarioRegex.test(propietario)) {
+      errors.propietario =
+        "- El nombre del propietario solo debe contener letras y espacios";
+    }
+
+    if (!fecha.trim()) {
+      errors.fecha = "- La fecha es obligatoria";
+    }
+
+    if (!sintomasRegex.test(sintomas)) {
+      errors.sintomas =
+        "- Los síntomas solo deben contener letras, espacios y puntuación básica";
+    }
+
+    if (!emailRegex.test(email)) {
+      errors.email = "- Formato de correo electrónico no válido";
+    }
     if ([nombre, propietario, email, fecha, sintomas].includes("")) {
-      console.log("Hay al menos un campo vacio");
-      setError(true);
+      errors.general = "Todos los campos son obligatorios";
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setError(errors);
       return;
     }
 
@@ -73,7 +105,20 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
       >
-        {error && <ErrorForm mensaje="Todos los campos son obligatorio" />}
+        {error && (
+          <ErrorForm
+            mensaje={
+              error.general ? error.general : "Todos los campos son obligatorio"
+            }
+          >
+            {error.nombre && <p>{error.nombre}</p>}
+            {error.propietario && <p>{error.propietario}</p>}
+            {error.fecha && <p>{error.fecha}</p>}
+            {error.sintomas && <p>{error.sintomas}</p>}
+            {error.email && <p>{error.email}</p>}
+          </ErrorForm>
+        )}
+
         <div className="mb-5">
           <label
             htmlFor="mascota"
