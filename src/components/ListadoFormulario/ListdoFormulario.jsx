@@ -1,13 +1,8 @@
 import Paciente from "../Paciente/paciente";
-// import { useEffect } from "react";
 
 const ListadoForm = ({ paciente, setPatiend, eliminarPaciente }) => {
-  // useEffect(() => {
-  //   console.log("Nuevo paciente");
-  // }, [paciente]);
-
   return (
-    <div className="container lg:w-full md:h-screen overflow-y-scroll">
+    <div className="container lg:w-full md:h-screen overflow-y-scroll text-white">
       {paciente && paciente.length ? (
         <>
           <h2 className="font-black text-3xl text-center">
@@ -15,7 +10,7 @@ const ListadoForm = ({ paciente, setPatiend, eliminarPaciente }) => {
           </h2>
           <p className="text-xl mt-5 mb-10 text-center">
             Administrar tus {""}
-            <span className="text-indigo-600 font-bold">Pacientes y Citas</span>
+            <span className="text-green-400 font-bold">Pacientes y Citas</span>
           </p>
 
           {paciente.map((patient, index) => (
@@ -29,12 +24,12 @@ const ListadoForm = ({ paciente, setPatiend, eliminarPaciente }) => {
         </>
       ) : (
         <>
-          <h2 className="font-black text-3xl text-center">No hay pacientes</h2>
-          <p className="text-xl mt-5 mb-10 text-center">
+          <h2 className="font-black text-white text-3xl text-center">
+            No hay pacientes
+          </h2>
+          <p className="text-xl mt-5 mb-10 text-center text-white">
             Comienza agregando pacientes {""}
-            <span className="text-indigo-600 font-bold">
-              y apareceran aqui!
-            </span>
+            <span className="text-green-400 font-bold">y apareceran aqui!</span>
           </p>
         </>
       )}

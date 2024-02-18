@@ -95,11 +95,11 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
   };
 
   return (
-    <div className="container md:w-full lg:w-2/5">
+    <div className="container md:w-full lg:w-2/5 text-white">
       <h2 className="font-black text-3xl text-center">Seguimiento paciente</h2>
       <p className="text-lg mt-5 mb-10 text-center">
         Añade pacientes y {""}
-        <span className="text-indigo-600 font-bold text-lg">Administralos</span>
+        <span className="text-green-400 font-bold text-lg">Administralos</span>
       </p>
       <form
         onSubmit={handleSubmit}
@@ -119,7 +119,7 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
           </ErrorForm>
         )}
 
-        <div className="mb-5">
+        <div className="mb-5 ">
           <label
             htmlFor="mascota"
             className="block text-gray-700 uppercase font-bold"
@@ -129,7 +129,7 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
           <input
             id="mascota"
             type="text"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md text-black"
             placeholder="Nombre de la Mascota"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
@@ -145,7 +145,7 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
           <input
             id="propietario"
             type="text"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md text-black"
             placeholder="Nombre del propietario"
             value={propietario}
             onChange={(e) => setpropietario(e.target.value)}
@@ -158,7 +158,7 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
           <input
             id="email"
             type="email"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md text-black"
             placeholder="Email contacto Propietario"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -171,7 +171,7 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
           <input
             id="alta"
             type="date"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md text-black"
             value={fecha}
             onChange={(e) => setFecha(e.target.value)}
           />
@@ -182,7 +182,7 @@ const Formulario = ({ paciente, setPaciente, patiend, setPatiend }) => {
           </label>
           <textarea
             id="sintomas"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md text-black"
             value={sintomas}
             onChange={(e) => setSintomas(e.target.value)}
           />

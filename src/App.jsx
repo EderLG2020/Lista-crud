@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto pt-20">
+    <div className="container mx-auto pt-20 lg:pt-10 md:pt-10">
       <Header />
       <div className="mt-12 p-5 md:flex">
         <Formulario
