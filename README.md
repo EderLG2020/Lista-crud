@@ -102,14 +102,14 @@ Modo escritorio
 
 1.
 
-[Imagen principal](https://i.ibb.co/KVRH6j9/375shots-so.png)
+![Imagen principal](https://i.ibb.co/KVRH6j9/375shots-so.png)
 
 2.
 
-[Rellenando datos](https://i.ibb.co/Rc616BY/544shots-so.png)
+![Rellenando datos](https://i.ibb.co/Rc616BY/544shots-so.png)
 
 Pantalla movil Pixel 7 "412 x 915"
 
 1.
 
-[Imagen principal](https://i.ibb.co/8269nzN/127shots-so.png)
+![Imagen principal](https://i.ibb.co/8269nzN/127shots-so.png)
